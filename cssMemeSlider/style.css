@@ -1,0 +1,187 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: #222;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 5%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: calc(100% * 10);
+    height: 31em;
+    transition: transform 1s ease-in-out;
+}
+
+.slide {
+    width: 10%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    border: 5px solid whitesmoke;
+    border-radius: 3em;
+}
+
+.text {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: white;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2em;
+}
+
+input[name="btn"] {
+    display: none;
+}
+
+.navigation {
+    display: flex;
+    align-self: self-end;
+    margin-top: 0;
+}
+
+.nav {
+    margin: 0.3em;
+    width: 1em;
+    height: 1em;
+    border: 3px solid whitesmoke;
+    background-color: rgb(174, 239, 239);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.nav:hover {
+    background-color: azure;
+    border: 3px solid rgb(174, 239, 239);
+}
+
+#btn1:checked ~ .slides {
+    transform: translateX(0%);
+}
+
+#btn2:checked ~ .slides {
+    transform: translateX(-10%);
+}
+
+#btn3:checked ~ .slides {
+    transform: translateX(-20%);
+}
+
+#btn4:checked ~ .slides {
+    transform: translateX(-30%);
+}
+
+#btn5:checked ~ .slides {
+    transform: translateX(-40%);
+}
+
+#btn6:checked ~ .slides {
+    transform: translateX(-50%);
+}
+
+#btn7:checked ~ .slides {
+    transform: translateX(-60%);
+}
+
+#btn8:checked ~ .slides {
+    transform: translateX(-70%);
+}
+
+#btn9:checked ~ .slides {
+    transform: translateX(-80%);
+}
+
+#btn10:checked ~ .slides {
+    transform: translateX(-90%);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+.slide-text {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+#btn1:checked ~ .footer .text #text1,
+#btn2:checked ~ .footer .text #text2,
+#btn3:checked ~ .footer .text #text3,
+#btn4:checked ~ .footer .text #text4,
+#btn5:checked ~ .footer .text #text5,
+#btn6:checked ~ .footer .text #text6,
+#btn7:checked ~ .footer .text #text7,
+#btn8:checked ~ .footer .text #text8,
+#btn9:checked ~ .footer .text #text9,
+#btn10:checked ~ .footer .text #text10 {
+    display: block;
+    animation: fadeIn 1s forwards;
+}
+
+#btn1:not(:checked) ~ .footer .text #text1,
+#btn2:not(:checked) ~ .footer .text #text2,
+#btn3:not(:checked) ~ .footer .text #text3,
+#btn4:not(:checked) ~ .footer .text #text4,
+#btn5:not(:checked) ~ .footer .text #text5,
+#btn6:not(:checked) ~ .footer .text #text6,
+#btn7:not(:checked) ~ .footer .text #text7,
+#btn8:not(:checked) ~ .footer .text #text8,
+#btn9:not(:checked) ~ .footer .text #text9,
+#btn10:not(:checked) ~ .footer .text #text10 {
+    animation: fadeOut 1s forwards;
+}
+
+#btn1:checked ~ .footer .navigation label[for="btn1"],
+#btn2:checked ~ .footer .navigation label[for="btn2"],
+#btn3:checked ~ .footer .navigation label[for="btn3"],
+#btn4:checked ~ .footer .navigation label[for="btn4"],
+#btn5:checked ~ .footer .navigation label[for="btn5"],
+#btn6:checked ~ .footer .navigation label[for="btn6"],
+#btn7:checked ~ .footer .navigation label[for="btn7"],
+#btn8:checked ~ .footer .navigation label[for="btn8"],
+#btn9:checked ~ .footer .navigation label[for="btn9"],
+#btn10:checked ~ .footer .navigation label[for="btn10"] {
+    background-color: transparent; 
+    border: 3px solid rgb(174, 239, 239); 
+}

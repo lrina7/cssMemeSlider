@@ -8,16 +8,20 @@ html, body {
     width: 100%;
     height: 100%;
     background: #222;
+    overflow: hidden;
+
 }
 
 .container {
     display: flex;
     flex-direction: column;
     width: 60%;
+    height: 100vh;
     margin: 0 auto;
     padding-top: 5%;
     overflow: hidden;
 }
+
 
 .slides {
     display: flex;
@@ -25,24 +29,27 @@ html, body {
     height: 25em;
     transition: transform 1s ease-in-out;
 }
-@media (min-width:1024px) {
+@media (min-width:1025px) {
     .slides {
-        height: 33em;
+        height: 30em;
     }
 }
 @media (max-width:768px) {
     .slides {
+        margin-top: 15%;
         height: 20em;
     }
 }
 @media (max-width:650px) {
     .slides {
+        margin-top: 30%;
         height: 16em;
     }
 }
 @media (max-width:500px) {
     .slides {
-        height: 13em;
+        margin-top: 40%;
+        height: 1em;
     }
 }
 @media (max-width:375px) {

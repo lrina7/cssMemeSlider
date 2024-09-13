@@ -9,7 +9,6 @@ html, body {
     height: 100%;
     background: #222;
     overflow: hidden;
-
 }
 
 .container {
@@ -22,7 +21,6 @@ html, body {
     overflow: hidden;
 }
 
-
 .slides {
     display: flex;
     width: calc(100% * 10);
@@ -34,30 +32,40 @@ html, body {
         height: 30em;
     }
 }
+@media (max-width:900px) {
+    .slides {
+        height: 23em;
+    }
+}
 @media (max-width:768px) {
     .slides {
         margin-top: 15%;
         height: 20em;
     }
 }
-@media (max-width:650px) {
+@media (max-width:660px) {
     .slides {
         margin-top: 30%;
-        height: 16em;
+        height: 17em;
     }
 }
 @media (max-width:500px) {
     .slides {
         margin-top: 40%;
-        height: 1em;
+        height: 13em;
     }
 }
-@media (max-width:375px) {
+@media (max-width:376px) {
     .slides {
         height: 10em;
     }
 }
-
+@media (max-width:320px) {
+    .slides {
+        margin-top: 60%;
+        height: 8em;
+    }
+}
 
 .slide {
     width: 10%;
@@ -69,6 +77,20 @@ html, body {
     height: 100%;
     border: 0.3em solid rgb(174, 239, 239);
     border-radius: 3em;
+}
+@media(max-width:500px) 
+{
+    .slide img {
+    border: 0.2em solid rgb(174, 239, 239);
+    border-radius: 2em;
+    }
+}
+@media(max-width:376px) 
+{
+    .slide img {
+    border: 0.1em solid rgb(174, 239, 239);
+    border-radius: 1em;
+    }
 }
 
 .text {
@@ -84,8 +106,14 @@ html, body {
 }
 @media (max-width:500px) {
     .text {
+        text-align: center;
         font-size: 0.8em;
         margin-top: 2em;
+    }
+}
+@media (max-width:376px) {
+    .text {
+        font-size: 0.7em;
     }
 }
 
@@ -107,6 +135,7 @@ input[name="btn"] {
 
 .navigation {
     display: flex;
+    cursor: pointer;
 }
 
 .nav {
@@ -117,6 +146,7 @@ input[name="btn"] {
     background-color: rgb(174, 239, 239);
     border-radius: 50%;
     cursor: pointer;
+    transition: 1s ease;
 }
 @media (max-width:768px) and (min-width:501px) {
     .nav {
@@ -132,48 +162,45 @@ input[name="btn"] {
     height: 0.8em;
     }
 }
+@media (max-width:321px) {
+    .nav {
+    margin: 0.2em;
+    width: 0.7em;
+    height: 0.7em;
+    }
+}
 
 .nav:hover {
-    background-color: azure;
-    border: 0.1em solid rgb(174, 239, 239);
+    background-color: whitesmoke;
 }
 
 #btn1:checked ~ .slides {
     transform: translateX(0%);
 }
-
 #btn2:checked ~ .slides {
     transform: translateX(-10%);
 }
-
 #btn3:checked ~ .slides {
     transform: translateX(-20%);
 }
-
 #btn4:checked ~ .slides {
     transform: translateX(-30%);
 }
-
 #btn5:checked ~ .slides {
     transform: translateX(-40%);
 }
-
 #btn6:checked ~ .slides {
     transform: translateX(-50%);
 }
-
 #btn7:checked ~ .slides {
     transform: translateX(-60%);
 }
-
 #btn8:checked ~ .slides {
     transform: translateX(-70%);
 }
-
 #btn9:checked ~ .slides {
     transform: translateX(-80%);
 }
-
 #btn10:checked ~ .slides {
     transform: translateX(-90%);
 }
@@ -246,3 +273,18 @@ input[name="btn"] {
     background-color: transparent; 
     border: 0.1em solid rgb(174, 239, 239); 
 }
+
+#btn1:checked ~ .footer .navigation label[for="btn1"]:hover,
+#btn2:checked ~ .footer .navigation label[for="btn2"]:hover,
+#btn3:checked ~ .footer .navigation label[for="btn3"]:hover,
+#btn4:checked ~ .footer .navigation label[for="btn4"]:hover,
+#btn5:checked ~ .footer .navigation label[for="btn5"]:hover,
+#btn6:checked ~ .footer .navigation label[for="btn6"]:hover,
+#btn7:checked ~ .footer .navigation label[for="btn7"]:hover,
+#btn8:checked ~ .footer .navigation label[for="btn8"]:hover,
+#btn9:checked ~ .footer .navigation label[for="btn9"]:hover,
+#btn10:checked ~ .footer .navigation label[for="btn10"]:hover {
+    border: 0.1em solid whitesmoke;
+}
+
+
